@@ -1,0 +1,23 @@
+{
+  "title": "SD Easy — AI Image Generator",
+  "description": "One-click install & launch for Stable Diffusion WebUI. Free, local, no API key needed. Just type a prompt and create images.",
+  "icon": "icon.png",
+  "menu": [
+    {
+      "text": "Install",
+      "link": "install.json"
+    },
+    {
+      "text": "Launch",
+      "link": "start.json"
+    },
+    {
+      "text": "Stop",
+      "link": "stop.json"
+    },
+    {
+      "text": "Update",
+      "link": "update.json"
+    }
+  ]
+}

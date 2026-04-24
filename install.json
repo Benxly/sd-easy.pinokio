@@ -1,0 +1,52 @@
+{
+  "run": [
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui app",
+        "on": [
+          {
+            "event": "/already exists/",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "path": "app",
+        "message": "python -m venv venv",
+        "on": [
+          {
+            "event": "/already exists/",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "path": "app",
+        "venv": "venv",
+        "message": "pip install --upgrade pip"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "path": "app",
+        "venv": "venv",
+        "message": "pip install -r requirements.txt"
+      }
+    },
+    {
+      "method": "notify",
+      "params": {
+        "html": "✅ SD Easy installed! Now click <b>Launch</b> to start generating images.",
+        "type": "success"
+      }
+    }
+  ]
+}

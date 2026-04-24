@@ -1,0 +1,14 @@
+{
+  "run": [
+    {
+      "method": "shell.stop"
+    },
+    {
+      "method": "notify",
+      "params": {
+        "html": "SD Easy has been stopped.",
+        "type": "info"
+      }
+    }
+  ]
+}

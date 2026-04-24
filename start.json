@@ -1,0 +1,29 @@
+{
+  "daemon": true,
+  "run": [
+    {
+      "method": "shell.run",
+      "params": {
+        "path": "app",
+        "venv": "venv",
+        "message": "python launch.py --listen --api --xformers --no-half-vae",
+        "on": [
+          {
+            "event": "/Model loaded/",
+            "done": true
+          },
+          {
+            "event": "/Running on local URL/",
+            "done": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "browser",
+      "params": {
+        "uri": "http://127.0.0.1:7860"
+      }
+    }
+  ]
+}
